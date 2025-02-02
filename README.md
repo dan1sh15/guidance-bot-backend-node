@@ -21,7 +21,6 @@ GuidanceBot is an AI-powered career counseling and emotional support platform th
 - **Backend**: Node.js, Express.js, MongoDB
 - **Frontend**: React.js, Context
 - **Authentication**: JWT (JSON Web Tokens)
-- **AI Integration**: OpenAI GPT-3
 - **Miscellaneous**: bcrypt (for password hashing), cors, dotenv, etc.
 
 ## Folder Structure
@@ -46,8 +45,8 @@ backend/
 ### Prerequisites
 Make sure you have the following installed on your machine:
 - Node.js (>= 14.x.x)
-- MongoDB (locally or via MongoDB Atlas)
-- Postman or a similar API testing tool (optional)
+- MongoDB (MongoDB Atlas)
+- Postman or a similar API testing tool
 
 ### Backend Setup
 

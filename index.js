@@ -1,31 +1,40 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 const { dbConnect } = require("./config/database");
-const cors = require('cors');
-const userRoutes = require('./routes/userRoutes');
+const cors = require("cors");
+const userRoutes = require("./routes/userRoutes");
 
-app.use(express.json());
+// Load environment variables from .env file
 require("dotenv").config();
 
+// Middleware to parse incoming JSON requests
+app.use(express.json());
+
+// Enable CORS to allow cross-origin requests
 app.use(
-    cors({
-        origin: "*",
-    })
+  cors({
+    origin: "*", // Allows requests from all origins (Can be restricted for security)
+  })
 );
 
+// Define the port from environment variables or use default (4000)
 const PORT = process.env.PORT || 4000;
 
+// Root route to check server status
 app.get("/", (req, res) => {
-    return res.json({
-        success: true,
-        message: "Server is up and running...",
-    });
+  return res.json({
+    success: true,
+    message: "Server is up and running...",
+  });
 });
 
+// Connect to MongoDB database
 dbConnect();
 
-app.use('/api/v1/auth', userRoutes);
+// Mount authentication routes under /api/v1/auth
+app.use("/api/v1/auth", userRoutes);
 
+// Start the Express server
 app.listen(PORT, () => {
-    console.log(`App is running successfully at port: ${PORT}`);
+  console.log(`App is running successfully at port: ${PORT}`);
 });

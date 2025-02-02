@@ -19,7 +19,7 @@ GuidanceBot is an AI-powered career counseling and emotional support platform th
 
 ## Tech Stack
 - **Backend**: Node.js, Express.js, MongoDB
-- **Frontend**: React.js, Redux
+- **Frontend**: React.js, Context
 - **Authentication**: JWT (JSON Web Tokens)
 - **AI Integration**: OpenAI GPT-3
 - **Miscellaneous**: bcrypt (for password hashing), cors, dotenv, etc.

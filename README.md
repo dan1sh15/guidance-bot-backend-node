@@ -24,6 +24,23 @@ GuidanceBot is an AI-powered career counseling and emotional support platform th
 - **AI Integration**: OpenAI GPT-3
 - **Miscellaneous**: bcrypt (for password hashing), cors, dotenv, etc.
 
+## Folder Structure
+```
+backend/
+├── config/
+│ └── database.js # Database configuration
+├── controllers/
+│ ├── Auth.js # Admin-related logic
+├── middleware/
+│ └── Auth.js # Authentication middleware
+├── models/
+│ ├── User.js # User model
+├── routes/
+│ ├── userRoutes.js # User routes
+├── .env # Environment variables
+├── index.js
+```
+
 ## Project Setup
 
 ### Prerequisites
